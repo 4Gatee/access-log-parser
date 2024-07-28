@@ -9,14 +9,16 @@ public class Main {
         while (true) {
             System.out.print("Enter path to file: ");
             File file = new File(scanner.nextLine());
+            boolean fileExists = file.exists();
+            boolean isDirectory = file.isDirectory();
 
-            if (file.exists()) {
-                if (file.isDirectory()) {
-                    System.out.print("This is a directory, not a file. ");
-                    continue;
-                }
-            } else {
+            if (!fileExists) {
                 System.out.print("Incorrect path. ");
+                continue;
+            }
+
+            if (isDirectory) {
+                System.out.print("This is a directory, not a file. ");
                 continue;
             }
 
