@@ -2,8 +2,22 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Введите текст и нажмите <Enter>: ");
-        String text = new Scanner(System.in).nextLine();
-        System.out.println("Длина текста: " + text.length());
+        System.out.println("Введите первое число:");
+        int first_number = new Scanner(System.in).nextInt();
+
+        System.out.println("Введите второе число:");
+        int second_number = new Scanner(System.in).nextInt();
+
+        int sum = first_number + second_number;
+        System.out.println("Сумма чисел: " + sum);
+
+        int diff = first_number - second_number;
+        System.out.println("Разность чисел: " + diff);
+
+        int product = first_number * second_number;
+        System.out.println("Произведение чисел: " + product);
+
+        double quotient = (double) first_number / second_number;
+        System.out.println("Частное чисел: " + quotient);
     }
-}
+}    
